@@ -1,10 +1,19 @@
-# LargeScale 
+This is a repository to make Megatron-Deepspeed easier to use
 
-Set `DATA_PATH`, `MULTITASK_DATA_PATH`, `CHECKPOINT_PATH` in `configs/glm-130b/glm-130b.sh` and `HOST_FILE_PATH` in `scripts/submit_gpu.sh`. Run the following scripts to reproduce GLM-130B's  training.
-
-```
-bash scripts/submit_gpu.sh configs/glm-130b/glm-130b.sh
-```
-
-At least 24 DGX-A100 (40G) is needed to lanuch training. A more detailed README will be released soon.
-
+| Model             |   MMLU   |  C-Eval  |  GSM8K   |   MATH   | HumanEval |   MBPP   |   BBH    |  CMMLU   |
+|:------------------|:--------:|:--------:|:--------:|:--------:|:---------:|:--------:|:--------:|:--------:|
+| LLaMA2-7B         |   46.8   |   32.5   |   16.7   |   3.3    |   12.8    |   20.8   |   38.2   |   31.8   |
+| LLaMA2-13B        |   55.0   |   41.4   |   29.6   |   5.0    |   18.9    |   30.3   |   45.6   |   38.4   |
+| LLaMA2-34B        |   62.6   |    -     |   42.2   |   6.2    |   22.6    |   33.0   |   44.1   |    -     |
+| ChatGLM2-6B       |   47.9   |   51.7   |   32.4   |   6.5    |     -     |    -     |   33.7   |    -     |
+| InternLM-7B       |   51.0   |   53.4   |   31.2   |   6.3    |   10.4    |   14.0   |   37.0   |   51.8   |
+| InternLM-20B      |   62.1   |   58.8   |   52.6   |   7.9    |   25.6    |   35.6   |   52.5   |   59.0   |
+| Baichuan2-7B      |   54.7   |   56.3   |   24.6   |   5.6    |   18.3    |   24.2   |   41.6   |   57.1   |
+| Baichuan2-13B     |   59.5   |   59.0   |   52.8   |   10.1   |   17.1    |   30.2   |   49.0   |   62.0   |
+| Yi-34B      	  	  |   76.3   |   81.8   |   67.9   |   15.9   |   26.2    |   38.2   |   66.4   |   82.6   |
+| XVERSE-65B      	 |   70.8   |   68.6   |   60.3   |    -     |   26.3    |    -     |    -     |    -     |
+| Qwen-1.8B     |   45.3   |   56.1   |   32.3   |   2.3    |   15.2    |   14.2   |   22.3   |   52.1   |
+| Qwen-7B       |   58.2   |   63.5   |   51.7   |   11.6   |   29.9    |   31.6   |   45.0   |   62.2   |
+| Qwen-14B     |   66.3   |   72.1   |   61.3   |   24.8   |   32.3    |   40.8   |   53.4   |   71.0   |
+| Qwen-72B      |   76.2   |   83.3   |   81.9   |   40.6   |   68.9    |   52.2   |   65.9   |   83.6   |
+| **XingZhi-MOE** | **74.2** | **76.7** | **82.4** | **35.9** | **60.2**  | **48.7** | **64.1** | **79.7** |
